@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FOSERA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -20,6 +20,13 @@
 
         body {
             background-color: aliceblue;
+            height: 1000px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
         }
 
         .header {
@@ -27,7 +34,6 @@
             height: 70px;
             background-color: #008080;
             font-family: "Poppins", sans-serif;
-
             display: flex;
             align-items: center;
         }
@@ -111,6 +117,43 @@
             font-size: 24px;
             color: white;
         }
+
+        .footer {
+            background-color: #008080;
+            width: 100%;
+            height: 30px;
+            margin-bottom: 20px;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 250px;
+            border: 4px solid #008080;
+            margin: 30px;
+            border-radius: 15px;
+        }
+        .box2 {
+            width: 100px;
+            border: 4px solid #008080;
+            margin: 10px;
+            border-radius: 15px;
+        }
+        .tatacara {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .t {
+            margin: 20px;
+            margin-bottom: 5px;
+        }
+
+        .tentang {
+            margin-left: 40px;
+            font-size: 20px;
+        }
+        
     </style>
 
 </head>
@@ -122,10 +165,18 @@
                 alt="logo-mutu"></div>
         <div class="nav-menu">
             <ul>
-                <li>BERANDA</li>
-                <li>LAPORAN</li>
-                <li>TENTANG</li>
-                <li>KONTAK</li>
+                <a href="laporan.html">
+                    <li>BERANDA</li>
+                </a>
+                <a href="laporan.html">
+                    <li>LAPORAN</li>
+                </a>
+                <a href="laporan.html">
+                    <li>RIWAYAT</li>
+                </a>
+                <a href="laporan.html">
+                    <li>KONTAK</li>
+                </a>
                 <li class="user-icon">
                     <a href="login.html">
                         <i class="fa-solid fa-user"></i>
@@ -142,7 +193,27 @@
         <img src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2025/05/WhatsApp-Image-2025-05-29-at-08.20.27-1536x691.jpeg"
             alt="">
     </div>
-    <div></div>
+    <div class="footer"></div>
+    <h2 class="t">TATA CARA PENGGUNAAN </h2>
+    <div class="tatacara">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box1"></div>
+    </div>
+    <h2 class="t">TENTANG</h2>
+    <div class="tentang">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt voluptas aperiam nihil voluptatum qui vel
+            sed ratione laborum tenetur fugit possimus, minima eligendi asperiores reiciendis! Similique, voluptatibus
+            eligendi. Qui, sit.</p>
+    </div>
+    <div class="button">
+        <a href="" class="">ISI PENGADUAN</a>
+        <a href="">CARI PENGADUAN</a>
+    </div>
 </body>
 
 </html>
