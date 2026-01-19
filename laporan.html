@@ -7,15 +7,15 @@
     <title>LAPORAN</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e8c5ddf50d.js" crossorigin="anonymous"></script>
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
         }
 
         body {
@@ -26,79 +26,141 @@
             width: 100%;
             height: 70px;
             background-color: #008080;
-            font-family: "Poppins", sans-serif;
-
             display: flex;
             align-items: center;
+            padding: 0 30px;
+        }
+
+        .logo img {
+            height: 55px;
         }
 
         .nav-menu {
             margin-left: auto;
-            margin-right: 40px;
         }
 
         .nav-menu ul {
             list-style: none;
             display: flex;
             gap: 30px;
+            align-items: center;
         }
 
         .nav-menu ul li {
             color: white;
-            font-weight: 500;
             cursor: pointer;
+            font-weight: 500;
+        }
+
+        .nav-menu ul li a {
+            color: white;
+            text-decoration: none;
         }
 
         .nav-menu ul li:hover {
             text-decoration: underline;
         }
 
-        .logo img {
-            height: 55px;
-            width: auto;
-            object-fit: contain;
-        }
-
         .box-form {
             display: flex;
             justify-content: center;
-            align-items: center;
             padding: 40px 0;
         }
 
         .box {
             width: 50%;
-            height: 700px;
-            border: 2px solid grey;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
         }
-        .header1{
-            width: 80%;
+
+        .header1 {
+            width: 100%;
             height: 50px;
             background-color: #008080;
-            border-radius: 5px;
-            color: aliceblue;
+            border-radius: 6px;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 25px;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #008080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
             margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #006666;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                width: 90%;
+            }
         }
     </style>
 </head>
 
 <body>
+
     <div class="header">
-        <div class="logo"><img
-                src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2021/06/cropped-SMK-MUTU-500-x-160-px.png"
-                alt="logo-mutu"></div>
+        <div class="logo">
+            <img src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2021/06/cropped-SMK-MUTU-500-x-160-px.png"
+                alt="logo-mutu">
+        </div>
         <div class="nav-menu">
-            <ul>
-                <li>BERANDA</li>
-                <li>LAPORAN</li>
-                <li>TENTANG</li>
-                <li>KONTAK</li>
+             <ul>
+                <a href="laporan.html">
+                    <li>BERANDA</li>
+                </a>
+                <a href="laporan.html">
+                    <li>LAPORAN</li>
+                </a>
+                <a href="laporan.html">
+                    <li>RIWAYAT</li>
+                </a>
+                <a href="laporan.html">
+                    <li>KONTAK</li>
+                </a>
                 <li class="user-icon">
                     <a href="login.html">
                         <i class="fa-solid fa-user"></i>
@@ -106,16 +168,48 @@
                 </li>
 
             </ul>
-
         </div>
     </div>
+
     <div class="box-form">
         <div class="box">
             <div class="header1">
                 <h3>BERIKAN LAPORAN ANDA</h3>
             </div>
+
+            <form>
+                <div class="form-group">
+                    <label>Judul Laporan</label>
+                    <input type="text" placeholder="Masukkan judul laporan" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Kategori</label>
+                    <select required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option>Pelanggaran</option>
+                        <option>Kerusakan Fasilitas</option>
+                        <option>Kehilangan</option>
+                        <option>Perundungan</option>
+                        <option>Saran / Masukan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Lokasi Kejadian</label>
+                    <input type="text" placeholder="Contoh: Ruang Kelas, Kantin" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Keterangan</label>
+                    <textarea rows="5" placeholder="Jelaskan kejadian secara lengkap" required></textarea>
+                </div>
+
+                <button type="submit">Kirim Laporan</button>
+            </form>
         </div>
     </div>
+
 </body>
 
 </html>
