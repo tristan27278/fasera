@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak | FOSERA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e8c5ddf50d.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aliceblue;
+            font-family: "Poppins", sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .header {
+            width: 100%;
+            height: 70px;
+            background-color: #008080;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 55px;
+            margin-left: 20px;
+        }
+
+        .nav-menu {
+            margin-left: auto;
+            margin-right: 40px;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-menu ul li {
+            color: white;
+            font-weight: 500;
+        }
+
+        .nav-menu ul li:hover {
+            text-decoration: underline;
+        }
+
+        .user-icon i {
+            font-size: 22px;
+        }
+
+        .kontak-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .kontak-container h2 {
+            margin-bottom: 10px;
+            color: #008080;
+        }
+
+        .kontak-container p {
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .kontak-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .kontak-info div {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .kontak-info i {
+            color: #008080;
+            margin-right: 10px;
+        }
+
+        .kontak-info a {
+            color: #008080;
+            font-weight: 500;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-family: "Poppins", sans-serif;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #008080;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #006666;
+        }
+
+        .footer {
+            width: 100%;
+            height: 30px;
+            background-color: #008080;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .kontak-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img src="https://www.smkmutucikampek.sch.id/wp-content/uploads/2021/06/cropped-SMK-MUTU-500-x-160-px.png">
+        </div>
+        <div class="nav-menu">
+            <ul>
+                <a href="index.html"><li>BERANDA</li></a>
+                <a href="laporan.html"><li>LAPORAN</li></a>
+                <a href="riwayat.html"><li>RIWAYAT</li></a>
+                <a href="kontak.html"><li>KONTAK</li></a>
+                <li class="user-icon">
+                    <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="kontak-container">
+        <h2>Hubungi Kami</h2>
+        <p>Jika Anda memiliki pertanyaan, saran, atau pengaduan, silakan hubungi kami melalui informasi berikut.</p>
+
+        <div class="kontak-grid">
+            <div class="kontak-info">
+                <div><i class="fa-solid fa-location-dot"></i> SMK Mutu Cikampek</div>
+                <div><i class="fa-solid fa-envelope"></i> @gmail.com </div>
+                <div><i class="fa-solid fa-phone"></i> 085691801623</div>
+                <div>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <a href="https://wa.me/6285691801623" target="_blank">Chat WhatsApp</a>
+                </div>
+            </div>
+
+            <form>
+                <input type="text" placeholder="Nama Lengkap" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="5" placeholder="Pesan" required></textarea>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+</body>
+</html>
